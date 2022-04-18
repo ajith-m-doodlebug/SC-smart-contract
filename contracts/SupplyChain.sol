@@ -84,7 +84,7 @@ contract SupplyChain {
         address _accountAddress,
         string memory _name,
         uint256 _ownerId
-    ) public onlyOwner(_accountAddress, _ownerId) {
+    ) public {
         require(isAccountPresent[_accountAddress], "Invalid Account");
         accountsByAddress[_accountAddress].owners.push(
             OwnerDetails(_name, _ownerId)
@@ -154,7 +154,7 @@ contract SupplyChain {
         address _accountAddress,
         string memory _name,
         uint256 _supplierId
-    ) public onlySupplier(_accountAddress, _supplierId) {
+    ) public {
         require(isAccountPresent[_accountAddress], "Invalid Account");
         accountsByAddress[_accountAddress].suppliers.push(
             SupplierDetails(_name, _supplierId)
