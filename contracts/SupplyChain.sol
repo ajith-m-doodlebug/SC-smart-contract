@@ -259,7 +259,7 @@ contract SupplyChain {
         address _accountAddress,
         uint256 _amountPaid,
         uint256 _planExpiresAt
-    ) public payable onlyCompany {
+    ) public onlyCompany {
         accountsByAddress[_accountAddress].isPaymentDone = true;
         accountsByAddress[_accountAddress].amountPaid = _amountPaid;
         accountsByAddress[_accountAddress].planExpiresAt = _planExpiresAt;
