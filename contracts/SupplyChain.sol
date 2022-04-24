@@ -221,7 +221,7 @@ contract SupplyChain {
         );
     }
 
-    // OA-2 : The function to get the number of products.
+    // SP-2 : The function to get the number of products.
     function getNoProductSupplier(address _accountAddress, uint256 _supplierId)
         public
         view
